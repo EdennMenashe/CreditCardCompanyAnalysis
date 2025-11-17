@@ -1,5 +1,5 @@
 CREATE DATABASE Final_Project
---ωλτεμ θαμΰεϊ
+--ΓΉΓ«Γ΄Γ₯Γ¬ Γ¨Γ‘Γ¬Γ Γ₯ΓΊ
 SELECT * INTO historical_transactions_staging
 FROM historical_transactions_mirror;
 
@@ -18,7 +18,7 @@ FROM test_mirror;
 SELECT * INTO train_staging
 FROM train_mirror;
 
---αγιχϊ λτιμειεϊ
+--Γ‘Γ£Γ©Γ·ΓΊ Γ«Γ΄Γ©Γ¬Γ₯Γ©Γ₯ΓΊ
 SELECT Count(*)
 FROM (
     SELECT DISTINCT *
@@ -75,7 +75,7 @@ FROM (
 SELECT COUNT(*)
 FROM sample_submission_mirror
 
---ζιδει ςψλιν ηρψιν
+--Γ¦Γ©Γ€Γ₯Γ© Γ²ΓΈΓ«Γ©Γ­ Γ§Γ±ΓΈΓ©Γ­
 SELECT 'historical_transactions_staging' AS table_name,
     SUM(CASE WHEN authorized_flag IS NULL OR LTRIM(RTRIM(authorized_flag)) = '' THEN 1 ELSE 0 END) AS missing_authorized_flag,
     SUM(CASE WHEN card_id IS NULL OR LTRIM(RTRIM(card_id)) = '' THEN 1 ELSE 0 END) AS missing_card_id,
@@ -158,7 +158,7 @@ SELECT 'sample_submission_staging' AS table_name,
     SUM(CASE WHEN target IS NULL OR LTRIM(RTRIM(target)) = '' THEN 1 ELSE 0 END) AS missing_target
 FROM sample_submission_staging;
 
---ξιμει ςψλιν ηρψιν
+--Γ®Γ©Γ¬Γ₯Γ© Γ²ΓΈΓ«Γ©Γ­ Γ§Γ±ΓΈΓ©Γ­
 -- historical_transactions_staging
 UPDATE historical_transactions_staging
 SET category_3 = 'UNKNOWN'
@@ -232,7 +232,7 @@ SET first_active_month = 'UNKNOWN'
 WHERE first_active_month IS NULL OR LTRIM(RTRIM(first_active_month)) = '';
 
 
---ωιπει ρεβ πϊεπιν
+--ΓΉΓ©Γ°Γ₯Γ© Γ±Γ₯Γ’ Γ°ΓΊΓ₯Γ°Γ©Γ­
 -- historical_transactions_staging
 ALTER TABLE historical_transactions_staging ALTER COLUMN installments INT;
 ALTER TABLE historical_transactions_staging ALTER COLUMN month_lag INT;
