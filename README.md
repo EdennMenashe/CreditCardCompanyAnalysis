@@ -23,9 +23,11 @@ Analyze customer behavior using transaction-level data to identify:
 ---
 
 ## Data Sources
-The datasets used in this project were obtained from **Kaggle (Elo Merchant Category Recommendation dataset)**.  
+The datasets used in this project were obtained from Kaggle:  
+[Elo Merchant Category Recommendation – Kaggle](https://www.kaggle.com/competitions/elo-merchant-category-recommendation/data)
+
 The data includes transaction records, merchant information, customer attributes, and geographic identifiers.  
-All datasets were imported into SQL Server for cleaning, preprocessing, and analytical view creation, and later visualized in Power BI.
+All datasets were imported into SQL Server for data cleaning, preprocessing, and analytical view creation, and later visualized in Power BI.
 
 ---
 
