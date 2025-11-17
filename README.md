@@ -79,7 +79,7 @@ Screenshots available in the `Dashboards` folder:
 ---
 
 ## Tools and Technologies
-- SQL Server (T-SQL)  
+- SQL Server
 - SQL Views  
 - Power BI  
 - Excel / CSV base files  
